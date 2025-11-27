@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA APOD Explorer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-white">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black px-4">
+    <a class="navbar-brand" href="#">🚀 NASA APOD Explorer</a>
+</nav>
+<div class="container mt-4">
+    <!-- Seleccionar Fecha -->
+    <div class="card bg-secondary p-3">
+        <label class="fw-bold">Seleccionar fecha:</label>
+        <input type="date" id="apodDate" class="form-control mt-2">
+        <button class="btn btn-primary mt-3" id="searchButton">Buscar APOD</button>
+    </div>
+    <!-- Imagen del día -->
+    <div class="card bg-black mt-4 p-3 shadow" id="apodCard">
+        <h2 id="apodTitle" class="text-center"></h2>
+        <h5 id="apodDateText" class="text-center text-info"></h5>
+
+        <div id="mediaContainer" class="text-center mt-3"></div>
+
+        <p id="apodExplanation" class="mt-3"></p>
+
+        <button id="favouriteButton" class="btn btn-warning w-100 mt-3 fw-bold">
+            ⭐ Agregar a Favoritos
+        </button>
+    </div>
+    <!-- Lista de favoritos -->
+    <div class="card bg-secondary mt-4 p-3">
+        <h3>⭐ Favoritos</h3>
+        <ul id="favoritesList" class="list-group mt-2"></ul>
+    </div>
+</div>
+<script src="nasa.js"></script>
+</body>
+</html>
